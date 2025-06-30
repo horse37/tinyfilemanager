@@ -10,7 +10,8 @@ $use_auth = true;
 
 // Usuários e senhas
 $auth_users = array(
-    'daniel@infopowersistemas.com.br' => '$2y$10$r45fg9EyNrUl3LG/AvjsRuUjRT1maCWcY5XkzYLdMFTQhLnNIn56K' // senha: masterkey
+    //'daniel@infopowersistemas.com.br' => '$2y$10$r45fg9EyNrUl3LG/AvjsRuUjRT1maCWcY5XkzYLdMFTQhLnNIn56K' // senha: masterkey
+    'daniel@infopowersistemas.com.br' => password_hash('masterkey', PASSWORD_DEFAULT)
 );
 
 // Usuários com acesso somente leitura
