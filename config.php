@@ -10,8 +10,7 @@ $use_auth = true;
 
 // Usuários e senhas
 $auth_users = array(
-    //'daniel@infopowersistemas.com.br' => '$2y$10$r45fg9EyNrUl3LG/AvjsRuUjRT1maCWcY5XkzYLdMFTQhLnNIn56K' // senha: masterkey
-    'horse37' => password_hash('masterkey', PASSWORD_DEFAULT)
+    'daniel@infopowersistemas.com.br' => '$2y$10$92X85vL5t.T9Z7H9dQOz/OAjC2E6KQeBp8XJk91ZRoNxG7VlDdQ0u' // masterkey
 );
 
 // Usuários com acesso somente leitura
@@ -23,31 +22,23 @@ $highlightjs_style = 'vs';
 $edit_files = true;
 
 // Configurações de tempo
-$default_timezone = 'America/Sao_Paulo'; // Fuso horário de São Paulo
+$default_timezone = 'America/Sao_Paulo';
 
-// Caminhos
-//$root_path = $_SERVER['DOCUMENT_ROOT'];
+// Caminhos (CRUCIAL)
 $root_path = '/home/easypanel/apps/servidor2025/storage/uploads';
-$root_url = '';
+$root_url = ''; // IMPORTANTE: deixe vazio
 $http_host = $_SERVER['HTTP_HOST'];
 
-// Configurações adicionais
-$directories_users = array();
-$iconv_input_encoding = 'UTF-8';
-$datetime_format = 'd.m.y H:i:s';
-$allowed_file_extensions = '';
-$allowed_upload_extensions = '';
-$favicon_path = '';
-$exclude_items = array();
-$online_viewer = 'google';
-$sticky_navbar = true;
-$path_display_mode = 'full';
+// Restrição de diretórios (OBRIGATÓRIO)
+$directories_users = array(
+    'daniel@infopowersistemas.com.br' => '/home/easypanel/apps/servidor2025/storage/uploads'
+);
+
+// Configurações de segurança
+$exclude_items = array('.htaccess', '.env');
+$allowed_upload_extensions = 'jpg,jpeg,png,gif,pdf,doc,docx';
 $max_upload_size_bytes = 5000;
 
 // Configurações de IP
 $ip_ruleset = 'OFF';
-$ip_silent = true;
-$ip_whitelist = array('127.0.0.1', '::1');
-$ip_blacklist = array('0.0.0.0', '::');
-
 ?>
