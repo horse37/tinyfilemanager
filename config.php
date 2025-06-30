@@ -26,7 +26,8 @@ $edit_files = true;
 $default_timezone = 'America/Sao_Paulo'; // Fuso horário de São Paulo
 
 // Caminhos
-$root_path = $_SERVER['DOCUMENT_ROOT'];
+//$root_path = $_SERVER['DOCUMENT_ROOT'];
+$root_path = '/home/easypanel/apps/servidor2025/storage/uploads';
 $root_url = '';
 $http_host = $_SERVER['HTTP_HOST'];
 
